@@ -86,6 +86,14 @@ void DHT_Filter_Init(void);
   */
 uint8_t DHT_Get_Filtered_Data(uint8_t buffer[], DHT_FilteredData_t *filtered_data);
 
+/**
+  * @brief  获取处理后的温湿度数据(简化接口)
+  * @param  filtered_data: 指向存储滤波后数据的结构体
+  * @retval 1:成功 0:失败
+  * @note   此函数封装了数据采集和滤波处理，应用层只需调用此函数即可
+  */
+uint8_t DHT_GetProcessedData(DHT_FilteredData_t *filtered_data);
+
 #endif /* __DHT11_H */
 
 /* 文件结束 -----------------------------------------------------------------*/

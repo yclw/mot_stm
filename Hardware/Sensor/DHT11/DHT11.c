@@ -270,4 +270,28 @@ uint8_t DHT_Get_Filtered_Data(uint8_t buffer[], DHT_FilteredData_t *filtered_dat
 	return 1;
 }
 
+/**
+  * @brief  获取处理后的温湿度数据(简化接口)
+  * @param  filtered_data: 指向存储滤波后数据的结构体
+  * @retval 1:成功 0:失败
+  * @note   此函数封装了数据采集和滤波处理，应用层只需调用此函数即可
+  */
+uint8_t DHT_GetProcessedData(DHT_FilteredData_t *filtered_data)
+{
+    uint8_t buffer[5] = {0};
+    
+    // 如果滤波器未初始化，先初始化
+    if (!is_filter_initialized) {
+        DHT_Filter_Init();
+    }
+    
+    // 获取原始温湿度数据
+    if (DHT_Get_Temp_Humi_Data(buffer)) {
+        // 应用卡尔曼滤波处理数据
+        return DHT_Get_Filtered_Data(buffer, filtered_data);
+    }
+    
+    return 0; // 采集失败
+}
+
 /* 文件结束 -----------------------------------------------------------------*/

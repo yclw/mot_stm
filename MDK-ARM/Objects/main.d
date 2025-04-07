@@ -28,14 +28,5 @@
 .\objects\main.o: ..\Library\stm32f10x_usart.h
 .\objects\main.o: ..\Library\stm32f10x_wwdg.h
 .\objects\main.o: ..\Library\misc.h
-.\objects\main.o: ..\System\Delay.h
-.\objects\main.o: ..\Hardware\Display\OLED.h
-.\objects\main.o: ..\Hardware\Sensor\Light\light.h
-.\objects\main.o: ..\Hardware\Middlewares\Filter\kalman.h
-.\objects\main.o: ..\Hardware\Sensor\DHT11\DHT11.h
-.\objects\main.o: ..\System\Delay.h
-.\objects\main.o: D:\keil\Core\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\main.o: D:\keil\Core\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\main.o: ..\Hardware\Communication\ESP8266\ESP8266.h
-.\objects\main.o: ..\Hardware\Actuator\Buzzer\Buzzer.h
-.\objects\main.o: D:\keil\Core\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\main.o: ..\User\App/app.h
+.\objects\main.o: ..\User\App/../Config/config.h
