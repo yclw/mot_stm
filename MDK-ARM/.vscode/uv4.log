@@ -1,0 +1,17 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil\Core\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling Buzzer.c...
+..\Hardware\DHT11.h(19): error:  #5: cannot open source input file "kalman.h": No such file or directory
+    #include "kalman.h"
+..\Hardware\Buzzer.c: 0 warnings, 1 error
+compiling DHT11.c...
+..\Hardware\DHT11.h(19): error:  #5: cannot open source input file "kalman.h": No such file or directory
+    #include "kalman.h"
+..\Hardware\DHT11.c: 0 warnings, 1 error
+compiling main.c...
+..\Hardware\DHT11.h(19): error:  #5: cannot open source input file "kalman.h": No such file or directory
+    #include "kalman.h"
+..\User\main.c: 0 warnings, 1 error
+".\Objects\Project.axf" - 3 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:00
